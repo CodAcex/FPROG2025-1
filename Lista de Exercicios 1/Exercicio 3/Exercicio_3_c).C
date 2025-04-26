@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main()
+{
+    char sexo;
+    float dia, mes, ano;
+    float altura;
+    float peso;
+
+    printf("Qual o seu genero(M/F)?: ");
+    scanf(" %c", &sexo);
+    printf("Digite o dia do seu aniversario: ");
+    scanf("%f", &dia);
+    printf("Digite o mes do seu aniversario: ");
+    scanf("%f", &mes);
+    printf("Digite o ano do seu aniversario: ");
+    scanf("%f", &ano);
+    printf("Digite sua altura(em metros): ");
+    scanf("%f", &altura);
+    printf("Qual o seu peso(em Kg): ");
+    scanf("%f", &peso);
+ 
+    printf("Dados armazenados com sucesso!");
+
+return 0;
+}

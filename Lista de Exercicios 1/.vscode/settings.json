@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "Exercicio_3_c).C": "cpp",
+        "Exercicio_3_b).C": "cpp",
+        "Exercicio_3_a).C": "cpp",
+        "Exercicio_2.C": "cpp",
+        "Exercicio_4_a).C": "cpp",
+        "Exercicio_4_b).C": "cpp",
+        "Exercicio_4_c).C": "cpp",
+        "Exercicio_4_d).C": "cpp"
+    },
+    "C_Cpp.default.compilerPath": "C:/msys64/ucrt64/bin/g++.exe"
+}

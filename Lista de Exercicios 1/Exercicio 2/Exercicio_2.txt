@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main()
+{
+    int anoAtual = 2025;
+    int anoNascimento = 0;
+    int idade = 0;
+    printf("Digite Seu ano de Nascimento: "); 
+    scanf("%d", & anoNascimento); //Entrada de Dados
+    idade = anoAtual - anoNascimento; //Processo Realizado: Subtração do Ano Atual e Ano de nascimento do usuário.
+    printf ("Sua idade = %d\n", idade); //Saida de Dados
+    
+return (0);    
+}    

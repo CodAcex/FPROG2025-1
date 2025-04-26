@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main()
+{
+    float SalarioBase = 0.0;  //Variavel
+    float Bonus = 0.0;        //Variavel
+    float SalarioFinal = 0.0; //Variavel
+
+    printf("Digite o Salario Base do Usuario: ");
+    scanf("%f", & SalarioBase); //Entrada de Dados
+    printf("Digite o bonus em porcentagem: ");
+    scanf("%f", & Bonus);  //Entrada de Dados
+    Bonus = (Bonus*SalarioBase) / 100.0;
+
+    SalarioFinal = SalarioBase + Bonus;
+
+    printf("Salario Final = %.2f\n", SalarioFinal);// Saida de Dados
+
+    return (0);
+}

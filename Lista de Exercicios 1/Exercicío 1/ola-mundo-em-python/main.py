@@ -1,0 +1,1 @@
+print ('Olá Mundo')  # Comando de Saída Padrão em Python
