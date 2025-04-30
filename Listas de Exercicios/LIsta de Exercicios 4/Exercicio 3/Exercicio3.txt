@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <stdbool.h>
+#include <ctype.h>
+
+int main()
+
+{
+    int numero;
+    int num = 1;
+    char repetir;
+    int valido;
+
+
+    do
+    {
+        printf("Digite o número desejado para a multiplicação(1 a 9): ");
+        scanf("%d", &numero);
+
+        if (numero <1 || numero>9)
+        {
+            printf("Número invalido, tente novamente!");
+        }
+        else
+        {
+            while (num <=10)
+            {
+                printf("%d x %d = %d\n", numero, num, numero * num);
+                num++;
+            }
+        }
+    
+
+    do
+    {
+        printf("Calcular outro número (s/n)? ");
+        scanf(" %c", &repetir);
+        repetir = toupper(repetir);
+
+        if (repetir != 'S' && repetir == 'N')
+        {
+        printf("Opção inválida");
+        valido = false;
+        }   
+        else
+        {
+            valido = true;
+        }
+    }while (valido == true);     
+
+
+    } while (repetir == 'S');
+    
+    
+    return 0;
+}
