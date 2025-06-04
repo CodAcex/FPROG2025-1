@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+#define ROWS 4  
+#define COLS 4
+
+int main ()
+
+{
+    int v1[COLS] = {1,0,0,0};
+    int v2[COLS] = {0,1,0,0};
+    int v3[COLS] = {0,0,1,0};
+    int v4[COLS] = {0,0,0,1};
+
+    int M[ROWS][COLS];
+
+    for(int i = 0; i < COLS; i++)
+    {
+        M[0][i] = v1[i];
+        M[1][i] = v2[i];
+        M[2][i] = v3[i];
+        M[3][i] = v4[i];
+    }
+
+    for (int i=0;i < ROWS; i++)
+    {
+        for (int j=0;j < COLS; j++)
+        {
+            printf("%d ", M[i][j]);
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}

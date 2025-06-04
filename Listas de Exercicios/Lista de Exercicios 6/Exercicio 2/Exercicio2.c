@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+#define ROWS 3  
+#define COLS 5
+
+int main ()
+
+{
+    int v1[COLS] = {1,5,9,2,5};
+    int v2[COLS] = {7,4,13,21,6};
+    int v3[COLS] = {8,-3,5,7,12};
+
+    int M[ROWS][COLS];
+
+    for(int i = 0; i < COLS; i++)
+    {
+        M[0][i] = v1[i] * 7;
+        M[1][i] = v2[i] * 7;
+        M[2][i] = v3[i] * 7;
+    }
+
+    for (int i=0;i < ROWS; i++)
+    {
+        for (int j=0;j < COLS; j++)
+        {
+            printf("%d ", M[i][j]);
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}
