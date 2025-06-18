@@ -4,6 +4,14 @@
 #include <stdlib.h>
 #include <time.h>
 
+typedef struct 
+{
+   int comum;
+   int raro;
+   int lendario;
+} Raridade;
+
+
 char ExibirMenu()
 {
     printf("********MENU PRINCIPAL*************\n");
@@ -28,62 +36,54 @@ char ExibirMenu()
     return opcao;
 }
 
-void Caixa(int comum, int raro, int lendario)
+Raridade Caixa(Raridade inv)
 {
     srand(time(NULL));
 
     int sorteado = 0;
     int min = 0;
     int max = 100;
-    comum = 0;
-    raro = 0;
-    lendario = 0;
-
     sorteado = min + rand() % (max - min + 1);
 
     if(sorteado <= 80)
     {
         printf("Você coletou 1 item comum!\n\n");
-        comum++;
-        comum += comum;
+        inv.comum++;
     }
     else if(sorteado <= 99)
     {
         printf("Você coletou 1 item raro!\n\n");
-        raro++;
-        raro += raro;
+        inv.raro++;
     }
     else
     {
         printf("Você coletou 1 item lendário!\n\n");
-        lendario++;
-        lendario += lendario;
+        inv.lendario++;
     }
+    return inv;
 }
 
-void Consulta(int comum, int raro, int lendario)
+void Consulta(Raridade inv)
 {
-    printf("Você possui %d Itens Comuns\n", comum);
-    printf("Você possui %d Itens Raros\n", raro);
-    printf("Você possui %d Itens Lendários\n\n", lendario);
+    printf("Você possui %d Itens Comuns\n", inv.comum);
+    printf("Você possui %d Itens Raros\n", inv.raro);
+    printf("Você possui %d Itens Lendários\n\n", inv.lendario);
 }
 
 
 int main()
 {
+    Raridade Raridade = {0, 0, 0};
     char opcao;
     do {
-        int comum = 0;
-        int raro = 0;
-        int lendario = 0;
         opcao = ExibirMenu();
         switch(opcao)
         {
             case '1':
-                Caixa(comum,raro,lendario);
+                Raridade = Caixa(Raridade);
                 break;
             case '2':
-                Consulta(comum,raro,lendario);
+                Consulta(Raridade);
                 break;
             case '3':
                 printf("Saindo do programa!\n");
