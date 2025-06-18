@@ -20,7 +20,7 @@ No seu computador (VS Code ou outro editor):
 
 💡 Sobre o Programa
 
-O programa simula um sistema de combates por turnos entre duas equipes.
+O programa simula um sistema de combates por turnos entre duas equipes realizado em código c.
 
 📌 Observações
 O código está no arquivo main.c.
